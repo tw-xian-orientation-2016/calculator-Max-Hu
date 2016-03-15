@@ -3,6 +3,9 @@ $( document ).ready(function() {
     initData();
     $("[name='number']").click(function() {
         var strNumber = $(this).html();
+        if (localStorage.execute === 'true') {
+            initData();
+        }
         if (localStorage.sign === ''){
             localStorage.number1 += strNumber;
             setInputValue(localStorage.number1);

@@ -50,6 +50,7 @@ function initData(){
     localStorage.setItem('sign','');
     $("#clear").html('AC');
     localStorage.setItem('temp','1');
+    localStorage.execute = false;
 }
 
 function reset(result){
@@ -61,6 +62,7 @@ function reset(result){
     }else {
         $("#output").val(result);
     }
+    localStorage.execute = true;
 
 }
 
