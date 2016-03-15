@@ -1,5 +1,5 @@
 function reactRouter(){
-    switch (localstorage.sign) {
+    switch (localStorage.sign) {
         case '+':
             $.ajax({
                 method:'post',
@@ -7,6 +7,7 @@ function reactRouter(){
                 contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
                 data: {'number1':localStorage.number1,'number2':localStorage.number2}
             }).done(function(data){
+                console.log(data);
                 reset(data);
             });
             break;
@@ -47,11 +48,20 @@ function initData(){
     localStorage.setItem('number1','');
     localStorage.setItem('number2','');
     localStorage.setItem('sign','');
+    $("#clear").html('AC');
+    localStorage.setItem('temp','1');
 }
 
 function reset(result){
-    localstorage.number1 = result;
-    $("#output").text(result);
+    localStorage.number1 = result;
+    localStorage.number2 = '';
+    localStorage.sign = '';
+    if (result === 'NaN' || result === 'Infinity'){
+        $("#output").val('错误');
+    }else {
+        $("#output").val(result);
+    }
+
 }
 
 function percent(){
