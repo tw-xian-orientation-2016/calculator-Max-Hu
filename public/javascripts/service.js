@@ -56,7 +56,7 @@ function initData(){
 function reset(result){
     localStorage.number1 = result;
     localStorage.number2 = '';
-    localStorage.sign = '';
+    if (localStorage.sign === '=') localStorage.sign = '';
     if (result === 'NaN' || result === 'Infinity'){
         $("#output").val('错误');
     }else {

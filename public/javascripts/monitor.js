@@ -3,10 +3,10 @@ $( document ).ready(function() {
     initData();
     $("[name='number']").click(function() {
         var strNumber = $(this).html();
-        if (localStorage.execute === 'true') {
-            initData();
-        }
         if (localStorage.sign === ''){
+            if (localStorage.execute === 'true') {
+                initData();
+            }
             localStorage.number1 += strNumber;
             setInputValue(localStorage.number1);
             $("#clear").html('C');
@@ -21,11 +21,10 @@ $( document ).ready(function() {
 
     $("[name='react']").click(function() {
         var bufferStr = $(this).html();
-        if (localStorage.sign === ''){
-            localStorage.sign = bufferStr;
-        } else {
+        if (localStorage.number2 != ''){
             reactRouter();
         }
+        localStorage.sign = bufferStr;
     });
 
     $("#percent").click(function() {
