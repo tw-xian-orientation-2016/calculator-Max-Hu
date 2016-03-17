@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="lib/bootstrap-3.3.5-dist/css/bootstrap.min.css">
+    <script type="text/javascript" src="lib/jquery-2.2.1/jquery-2.2.1.min.js"></script>
+    <script type="text/javascript" src="javascripts/monitor.js"></script>
+    <script type="text/javascript" src="javascripts/service.js"></script>
+</head>
+<body>
+<div class="container">
+    <input readonly type="text" id="output" class="form-control text-right" value="123.23">
+    <table class="table table-bordered">
+        <tr class="">
+            <td class="text-center col-col-xs-3" id="clear">AC</td>
+            <td class="text-center col-col-xs-3" id="reverse">+/-</td>
+            <td class="text-center col-col-xs-3" id="percent">%</td>
+            <td class="text-center col-col-xs-3" name="react" id="division">/</td>
+        </tr>
+        <tr class="">
+            <td class="text-center" name="number">7</td>
+            <td class="text-center" name="number">8</td>
+            <td class="text-center" name="number">9</td>
+            <td class="text-center" id="multiplication" name="react">*</td>
+        </tr>
+        <tr class="">
+            <td class="text-center" name="number">4</td>
+            <td class="text-center" name="number">5</td>
+            <td class="text-center" name="number">6</td>
+            <td class="text-center" id="subtraction" name="react">-</td>
+        </tr>
+        <tr class="">
+            <td class="text-center" name="number">1</td>
+            <td class="text-center" name="number">2</td>
+            <td class="text-center" name="number">3</td>
+            <td class="text-center" id="addition" name="react">+</td>
+        </tr>
+        <tr class="">
+            <td class="text-center" name="number" colspan="2">0</td>
+            <td class="text-center" name="number">.</td>
+            <td class="text-center" id="equal" name="react">=</td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
